@@ -74,15 +74,24 @@ informáticos para poder:
 8. Tabula
 9. httrack
 10. Paciencia
+* Markdown
 
-    
+** Recursos
+- [[https://github.com/flowsta/markdown][Mis apuntes de Markdown]]
+- [[http://docs.podigee.com/guides/markdown-cheatsheet.html][Markdown Cheatsheet]]
+- [[https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf][R Markdown Cheatsheet: R, Markdown y YAML]]
+* Github
+** Oportunidades
+
+** Recursos
+- [[https://github.com/flowsta/github][Mis notas de Github]]
+- [[https://guides.github.com/][Guías de Github]]
 * Cursos
 - https://www.datacamp.com/courses/
 - http://journalismcourses.org/DES17.html
 
 * Recursos
 ** Oportunidades
- https://education.github.com/
 
 ** Referencias bibliográficas						 :OK:
 
@@ -115,6 +124,7 @@ informáticos para poder:
 ** Manuales
  - Cómo utilizar /Google OCR/,  https://www.youtube.com/watch?v=DPJJON26Do4
  - Introducción al scraping de /PDF/, http://www.irekia.euskadi.eus/es/news/11703-introduccion-google-refine-curso-periodismo-datos
+
 
 
 
