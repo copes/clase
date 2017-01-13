@@ -1,0 +1,121 @@
+#+BLOG: blog.infotics.es
+#+CATEGORY: master, periodismodatos, villanueva, cope
+#+TAGS: ddj, web scraping, programación, html, consola, css, js,
+#+DESCRIPTION: Apuntes de la clase de introducción a la programación y web scraping del Máster de Periodismo de Datos del Centro Universitario Villanueva.
+#+TITLE: Notas para clase de introducción a la programación y Web scraping
+#+DATE: [2016-12-12 lun 10:30]
+#+AUTHOR: Adolfo Antón Bravo
+#+EMAIL: adolflow@infotics.es
+#+OPTIONS: todo:nil pri:nil tags:nil ^:nil 
+
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t
+#+OPTIONS: reveal_mathjax:t reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1200 reveal_height:800
+#+OPTIONS: toc:nil
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: sky
+#+REVEAL_HLEVEL: 2
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Apunter para una clase de introducción a web scraping y programación.">
+#+REVEAL_POSTAMBLE: <p> Creado por adolflow. </p>
+#+REVEAL_PLUGINS: (highlight markdown notes)
+#+REVEAL_EXTRA_CSS: file:///home/flow/Documentos/software/reveal.js/css/reveal.css
+#+REVEAL_ROOT: file:///home/flow/Documentos/software/reveal.js/
+
+* Presentación: qué pretende esta clase
+
+Como dice el título, se pretende introducir al periodista de datos en
+el uso de algunas técnicas de web scraping y de conceptos de lenguajes
+informáticos para poder:
+
+- Realizar web scraping para extraer datos
+- Trabajar con datos en PDFs
+- Manejarnos con distintos lenguajes informáticos.
+- Detectar, crear o reutilizar información (datos) estructurada.
+- Utilizar la Web como una gran fuente-base de datos
+- Aprender sobre formatos de datos.
+- Analizar e interpretar estos formatos
+- Gestionar información en distintos formatos y de distintas fuentes.
+
+* Necesidades previas
+
+- Disponer de un ordenador con sistema operativo sobre el que tengamos
+  permisos de superusuario.
+- Manejo del entorno de escritorio y atajos de teclado.
+- Conocer la Web: navegador, lenguaje HTML, programas, utilidades,
+  atajos, buscadores.
+- Instalación y desinstalación de programas
+- Resolución de problemas
+- Manejo de versiones
+- Git
+- Nociones de periodismo de datos: investigación, datos y
+  visualización.
+
+* Algunas cuestiones fundamentales
+- Conocimiento de la arquitectura hardware del ordenador.
+- Conocimiento de la estructura del sistema operativo.
+- Uso de la terminal, consola Unix.
+- Manejar la estructura de ficheros.
+- Distinguir entre rutas absolutas y relativas.
+- Nociones de las distintas codificaciones de caracteres.
+- 
+
+* Herramientas básicas
+1. PC si tiene GNU/Linux o posibilidad de máquina virtual, si no casi mejor Mac, aunque la máquina virtual no estaría de más.
+2. Navegador Firefox y Chrome
+3. Editor de textos con indentado y resaltado de sintaxis: Emacs, por
+   ejemplo. Mira esta [[https://blog.infotics.es/2015/11/11/editor-de-textos/][comparativa]]
+4. Firebug
+5. Google Drive, perfil
+6. Terminal. Si no, Cygwin
+7. Open Refine
+8. Tabula
+9. httrack
+10. Paciencia
+
+    
+* Cursos
+- https://www.datacamp.com/courses/
+- http://journalismcourses.org/DES17.html
+
+* Recursos
+** Oportunidades
+ https://education.github.com/
+
+** Referencias bibliográficas						 :OK:
+
+ - Aristarain, Manuel & Tigas, Mike & Merril, Jeremy B. (2014) /Scraping PDFs with Tabula/. URL: https://s3.amazonaws.com/media.miketigas.com/files/20140627/20140627-tabula-IRE2014-withnotes.pdf
+
+ - Crucianelli, Sandra. (2013) /Herramientas digitales para periodistas/. Centro Knight para el Periodismo en las Américas de la Universidad de la Universidad de Texas. URL: https://knightcenter.utexas.edu/books/HDPP.pdf
+
+ - García Santiago, Lola. (2003) /Extraer y visualizar información en Internet: el Web Mining/. Gijón: Ediciones Trea
+
+ - Gray, Jonathan & Bounegru, Liliana & Chambers, Lucy. (2012) /Data Journalism Handbook/. European Journalism Centre y Open Knowledge Foundation. URL: http://datajournalismhandbook.org/
+
+ - Kayser-Brill, Nicolas. (2014) /Data wants to be free! (and clean)/. Medialab-Prado. URL: http://bit.ly/free-clean
+
+ - Méndez Rodriguez, Eva Mª. (2002) /Metadatos y Recuperación de información: estándares, problemas y aplicabilidad en bibliotecas digitales/. Gijón: Trea
+
+ - Nguyen, Dan. (2010) /Chapter 3: Turning PDFs to Text/. Propublica, Journalism in the Public Interest. URL: https://www.propublica.org/nerds/item/turning-pdfs-to-text-doc-dollars-guide
+
+ - Nguyen, Dan. (2010) /Chapter 5: Getting Text Out of an Image-Only PDF/. ProPublica, Journalism in the Public Interest. URL: https://www.propublica.org/nerds/item/image-to-text-ocr-and-imagemagick
+
+ - Schoolofdata, (2014) /Obteniendo datos de los PDF/. Web: School of Data. URL: http://es.schoolofdata.org/obteniendo-datos-de-los-pdfs/
+
+
+** Ejemplo: Scraping for Journalism, A guide for Collecting Data
+ Dan Nguyen de ProPublica realiza para el proyecto Our Dollars for Docs una aplicación de noticias que permite a los lectores buscar pagos de las compañías farmacéuticas a los médicos. La guía explica cómo recopilaron los datos:
+ - https://www.propublica.org/nerds/item/doc-dollars-guides-collecting-the-data
+ - http://www.propublica.org/nerds/item/image-to-text-ocr-and-imagemagick
+ - http://www.propublica.org/nerds/item/turning-pdfs-to-text-doc-dollars-guide
+
+
+** Manuales
+ - Cómo utilizar /Google OCR/,  https://www.youtube.com/watch?v=DPJJON26Do4
+ - Introducción al scraping de /PDF/, http://www.irekia.euskadi.eus/es/news/11703-introduccion-google-refine-curso-periodismo-datos
+
+
+
+
