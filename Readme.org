@@ -60,33 +60,153 @@ informáticos para poder:
 - Manejar la estructura de ficheros.
 - Distinguir entre rutas absolutas y relativas.
 - Nociones de las distintas codificaciones de caracteres.
-- 
+- Qué tipos de datos hay
+- Qué tipos de formatos de datos hay.
 
 * Herramientas básicas
-1. PC si tiene GNU/Linux o posibilidad de máquina virtual, si no casi mejor Mac, aunque la máquina virtual no estaría de más.
-2. Navegador Firefox y Chrome
-3. Editor de textos con indentado y resaltado de sintaxis: Emacs, por
-   ejemplo. Mira esta [[https://blog.infotics.es/2015/11/11/editor-de-textos/][comparativa]]
-4. Firebug
-5. Google Drive, perfil
-6. Terminal. Si no, Cygwin
-7. Open Refine
-8. Tabula
-9. httrack
-10. Paciencia
+
+** Sistema operativo
+- GNU/Linux, idóneo.
+- Mac, no está mal.
+- Windows: configurable o con máquina virtual con GNU/Linux.
+
+** Windows
+- [[http://7-zip.org][7-zip.org]], para archivos comprimidos.
+- [[http://cygwin.com][Cygwin]]
+
+** Emacs
+
+[[https://www.gnu.org/software/emacs/][Emacs]] se puede [[https://www.gnu.org/software/emacs/download.html][descargar]] y utilizar tanto en Linux, Windows o
+Mac. Podemos descargarlo desde:
+- [[http://ftp.gnu.org/gnu/emacs][ftp de Emacs]]
+- [[https://www.gnu.org/order/ftp.html][elegir un mirror]]
+- dejar que nos sugieran el mirror [[http://ftpmirror.gnu.org/emacs/][más cercano a nuestra ubicación.]]
+** Firefox y Chrome
+** Google Drive
+** Tabula
+** Open Refine
+
+
+* Terminal
+** Cygwin
+
+*** Cambiar directorio home
+http://stackoverflow.com/questions/1494658/how-can-i-change-my-cygwin-home-folder-after-installation
+
+Según comentan ahí, hay que añadir la variable =db_home= a
+ =/etc/nsswitch.conf= con la información =windows= para tener el
+ directorio de usuarix de Windows como =home=, es decir:
+
+#+BEGIN_EXAMPLE
+db_home: windows
+#+END_EXAMPLE
+
+O de forma equivalente:
+
+#+BEGIN_EXAMPLE
+db_home: /%H
+#+END_EXAMPLE
+
+De esta última manera puedes interpretar el esquema y hacer que estén
+dentro del subdirectorio =cygwin=, por ejemplo:
+
+#+BEGIN_EXAMPLE
+db_home: /%H/cygwin
+#+END_EXAMPLE
+
+En esta [[http://stackoverflow.com/questions/225764/safely-change-home-directory][página]] proponen otro método:
+
+#+BEGIN_SRC sh
+mkpasswd -l -p "$(cygpath -H)" > /etc/passwd
+#+END_SRC
+
+* HTML
+** Plantillas
+- [[https://html5up.net][html5up]]
+- [[https://templated.co/][templated.co]]
+- [[https://freehtml5.co][freehtml5.co]]
+
 * Markdown
 
 ** Recursos
 - [[https://github.com/flowsta/markdown][Mis apuntes de Markdown]]
 - [[http://docs.podigee.com/guides/markdown-cheatsheet.html][Markdown Cheatsheet]]
-- [[https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf][R Markdown Cheatsheet: R, Markdown y YAML]]
-* Github
+- [[https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf][R Markdown Cheatsheet: R, Markdown y YAML]]
+* Git y Github
+
+** Descarga
+Quien tenga sistema GNU/Linux o MacOSX no necesitará descargarse
+nada. Para lxs usuarixs de Windows, hay tres opciones:
+- [[https://desktop.github.com][Versión Desktop de Github]], cuenta con powershell y programa GUI.
+- [[https://git-scm.com/downloads][Git-scm.org]], la versión oficial de Git.
+- Instalar git en [[https://cygwin.com][Cygwin]]. Para ello hay que volver a ejecutar el
+  instalador de Cygwin y seleccionar git.
+** Errores detectados
+
+*** Setting certificate verify locations
+
+Al hacer =git push=, sale este error:
+
+#+BEGIN_EXAMPLE
+error: error setting certificate verify locations:
+CAfile: \bincurl-ca-bundle.crt
+CApath: none
+#+END_EXAMPLE
+
+Hay quien lo ha solucionado diciéndole a la configuración de git del
+sistema que el certificado está en =/bin/curl-ca-bundle.crt
+
+#+BEGIN_SRC sh
+git config --system http.sslcainfo /bin/curl-ca-bundle.crt
+
+#+END_SRC
+
+Y hay quien no lo ha resuelto así, ni siquiera con esta otra opción:
+
+#+BEGIN_SRC sh
+git config --global http.sslverify "false"
+#+END_SRC
+
+En [[http://stackoverflow.com/questions/3778042/github-error-cloning-my-private-repository][esta página]] afinan sobre las ruta de git:
+
+#+BEGIN_SRC sh
+git config --system http.sslcainfo "C:\Program Files (x86)\git\bin\curl-ca-bundle.crt"
+
+#+END_SRC
 ** Oportunidades
 
 ** Recursos
 - [[https://github.com/flowsta/github][Mis notas de Github]]
 - [[https://guides.github.com/][Guías de Github]]
-* Cursos
+
+* Programación
+** Lenguajes informáticos
+** Estructura
+#+BEGIN_EXAMPLE
+Sujeto Predicado Objeto
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+Función Variable Argumento
+#+END_EXAMPLE
+** Tipos de datos
+- Números enteros o /integers/
+- Decimales, flotantes o /floats/
+- Cadenas -de caracteres- o /strings/
+- Booleanos: verdades o falso
+- Otros objetos
+** Algunos símbolos
+- =\n=, línea nueva
+- =\b=, backspace
+- =\r=, retorno de carro.
+- =\t=, tabulador
+- =\f=, formfeed
+- =\e=, espacio
+- =\\=, barra invertida
+- =\"=, comillas
+- =\000=, carácter octal.
+
+* Cursosr
 - https://www.datacamp.com/courses/
 - http://journalismcourses.org/DES17.html
 
@@ -113,7 +233,7 @@ informáticos para poder:
 
  - Schoolofdata, (2014) /Obteniendo datos de los PDF/. Web: School of Data. URL: http://es.schoolofdata.org/obteniendo-datos-de-los-pdfs/
 
-
+- 
 ** Ejemplo: Scraping for Journalism, A guide for Collecting Data
  Dan Nguyen de ProPublica realiza para el proyecto Our Dollars for Docs una aplicación de noticias que permite a los lectores buscar pagos de las compañías farmacéuticas a los médicos. La guía explica cómo recopilaron los datos:
  - https://www.propublica.org/nerds/item/doc-dollars-guides-collecting-the-data
